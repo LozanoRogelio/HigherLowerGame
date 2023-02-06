@@ -9,9 +9,19 @@
 <body>
 
    <div class="main">
-      h1
-
+      <h1>Higher Lower</h1>
+      <p>Guess a number between 1 and 20</p>
+      <form>
+         <div class="form-group">
+            <label for="guess">Your guess:</label>
+            <input type="text" id="guess" class="form-control">
+         </div>
+         <button type="button" onclick="doGuess()">Guess</button>
+      </form>
    </div>
+   <p id="message"></p>
+
+   <script src="higherlower.js"></script>
    
 </body>
 </html>
