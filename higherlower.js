@@ -24,29 +24,29 @@ let guessArray = [];
 function doGuess() {
    let guess = Number(document.getElementById("guess").value);
    let message = document.getElementById("message");
+   
 
    if (isNaN(guess)) {
       message.innerHTML = "That is not a number!"
-      return;
    }
-   if (guess < 1 || guess > askMaxNum) {
+   else if (guess < 1 || guess > askMaxNum) {
       message.innerHTML = "That number is not in range, try again."
-      return;
    }
 
-   if (guessArray.indexOf(guess) >= 0) {
+   else if (guessArray.indexOf(guess) >= 0) {
       message.innerHTML = "Number has already been used!"
-      return;
    }
 
-   guessArray.push(guess)
-   if (guess == num) {
-      message.innerHTML = "You got it congrats! It took you " + guessArray.length + " and your guesses were " + guessArray.join(", ") + ".";
-   }
-   else if (guess > num) {
-      message.innerHTML = "No, try a lower number."
-   }
    else {
-      message.innerHTML = "No, try a higher number"
+      guessArray.push(guess)
+      if (guess == num) {
+         message.innerHTML = "You got it congrats! It took you " + guessArray.length + " attempts and your guesses were " + guessArray.join(", ") + ".";
+      }
+      else if (guess > num) {
+         message.innerHTML = "No, try a lower number."
+      }
+      else {
+         message.innerHTML = "No, try a higher number"
+      }
    }
 }

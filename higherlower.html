@@ -5,21 +5,31 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Higher/Lower Game</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Inter:wght@500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="higherlower.css">
 </head>
 <body>
 
    <div class="main">
-      <h1>Higher Lower</h1>
-      <p id="maxNum">Guess a number between 1 and ?</p>
-      <form>
-         <div class="form-group">
-            <label for="guess">Your guess:</label>
-            <input type="text" id="guess" class="form-control">
-         </div>
-         <button type="button" onclick="doGuess()">Guess</button>
-      </form>
+      <nav class="nav-links">
+         <h1>Higher Lower</h1>
+         <a href="#">How to Play?</a>
+         <a href="#">About</a>
+      </nav>
+      <div class="game">
+         <p id="maxNum">Guess a number between 1 and ?</p>
+         <form>
+            <label for="guess" id="label-guess">Your guess:</label><br>
+            <input type="text" id="guess">
+            <br>
+            <button type="button" onclick="doGuess()" class="btn">Guess</button>
+         </form>
+         <p id="message">Hi Roger</p>
+      </div>
+      
    </div>
-   <p id="message"></p>
 
    <script src="higherlower.js"></script>
    
