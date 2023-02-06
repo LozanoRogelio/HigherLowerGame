@@ -21,8 +21,6 @@ console.log(num)
 
 let guessArray = [];
 
-
-
 function doGuess() {
    let guess = Number(document.getElementById("guess").value);
    let message = document.getElementById("message");
@@ -36,9 +34,12 @@ function doGuess() {
       return;
    }
 
+   if (guessArray.indexOf(guess) >= 0) {
+      message.innerHTML = "Number has already been used!"
+      return;
+   }
+
    guessArray.push(guess)
-
-
    if (guess == num) {
       message.innerHTML = "You got it congrats! It took you " + guessArray.length + " and your guesses were " + guessArray.join(", ") + ".";
    }
