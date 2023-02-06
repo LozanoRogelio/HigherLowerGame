@@ -19,11 +19,14 @@ while (true) {
 let num = Math.floor(Math.random() * askMaxNum) + 1;
 console.log(num)
 
+let guessArray = [];
+
+
 
 function doGuess() {
    let guess = Number(document.getElementById("guess").value);
    let message = document.getElementById("message");
-   
+
    if (isNaN(guess)) {
       message.innerHTML = "That is not a number!"
       return;
@@ -32,8 +35,12 @@ function doGuess() {
       message.innerHTML = "That number is not in range, try again."
       return;
    }
+
+   guessArray.push(guess)
+
+
    if (guess == num) {
-      message.innerHTML = "You got it!";
+      message.innerHTML = "You got it congrats! It took you " + guessArray.length + " and your guesses were " + guessArray.join(", ") + ".";
    }
    else if (guess > num) {
       message.innerHTML = "No, try a lower number."
