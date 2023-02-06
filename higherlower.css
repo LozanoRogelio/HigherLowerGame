@@ -1,14 +1,18 @@
-html {
+html, body {
    font-family: 'Source Sans Pro', sans-serif;
    background-color: #0A3161;
+   background-image: linear-gradient(#0A3161, #368B87);
    color: #fff;
 }
 
+/* Nav CSS */
 .nav-links {
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 20px;
+   /* background-image: linear-gradient(#368B87, #0A3161); */
+
 }
 
 .nav-links > h1 {
@@ -22,9 +26,12 @@ html {
    text-decoration: none;
    font-size: 20px;
    margin-right: 10em;
-   color: #fff
+   color: #fff;
+
+   
 }
 
+/* Game CSS */
 .game {
    display: flex;
    flex-direction: column;
@@ -68,9 +75,101 @@ form {
    border-radius: 5px;
    font-size: 20px;
    text-align: center;
+
 }
 
 #message {
    width: 80%;
 }
 
+/* How to Play CSS */
+
+#how-to-play {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   width: 75%;
+   height: 700px;
+   background-color: #368B87;
+   border: solid #DBEFED;
+   border-radius: 20px;
+}
+
+#how-to-play h1 {
+   font-size: 60px;
+}
+
+.list {
+   height: 100%;
+   font-size: 25px;
+
+}
+
+.list li {
+   padding: 15px;
+}
+
+/* About CSS */
+
+#about {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   width: 75%;
+   height: 700px;
+   background-color: #0A3161;
+   border: solid #DBEFED;
+   border-radius: 20px;
+   padding: 30px;
+}
+
+#about h1 {
+   font-size: 60px;
+}
+#about p {
+   font-size: 30px;
+   padding: 40px;
+   background-color: #0A3161;
+   border: solid #DBEFED;
+   border-radius: 10px;
+   box-shadow: 5px 10px #368B87;
+   
+}
+
+/* Footer CSS */
+footer {
+   text-align: center;
+   margin-top: 50px;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 1107px) {
+   .nav-links {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+
+   }
+   .nav-links h1 {
+   margin: auto;
+   }
+   .nav-links a {
+   padding: 20px;
+   margin: auto;
+    }
+    #about p {
+      font-size: 20px;
+      padding: 40px;
+      background-color: #0A3161;
+      border: solid #DBEFED;
+      border-radius: 10px;
+      height: 100%;
+      min-height: 100px;
+      overflow: hidden;
+   
+   }
+
+
+ }

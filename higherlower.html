@@ -15,8 +15,8 @@
    <div class="main">
       <nav class="nav-links">
          <h1>Higher Lower</h1>
-         <a href="#">How to Play?</a>
-         <a href="#">About</a>
+         <a href="#how-to-play">How to Play?</a>
+         <a href="#about">About</a>
       </nav>
       <div class="game">
          <p id="maxNum">Guess a number between 1 and ?</p>
@@ -26,9 +26,36 @@
             <br>
             <button type="button" onclick="doGuess()" class="btn">Guess</button>
          </form>
-         <p id="message">Hi Roger</p>
+         <p id="message"></p>
       </div>
-      
+      <br>
+      <br>
+      <br>
+      <div id="how-to-play">
+         <h1>How To Play?</h1>
+         <ol class="list">
+            <li>Choose the Max Number</li>
+            <li>Guess of a number between 1 and Max Number chosen</li>
+            <li>Submit answer and wait for instructions</li>
+            <li>You will be informed whether to guess higher or lower based on your guess</li>            
+            <li>When you guess the correct number congrats!</li>            
+
+         </ol>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div id="about">
+         <h1>About</h1>
+         <p>My name is Rogelio Lozano, I have about a year of learning web development and strive for continued education to keep up with everyday changes. I have learned and developed with different languages and technologies such as : HTML, CSS, Bootstrap,
+            JavaScript, AJAX, React JS,
+            Java SE, Java EE, Core Java,
+            Spring Framework, Thymeleaf,
+            MySQL, XML, JSON, AWS, Problem-Solving Skills
+            Object-Oriented Programming(OOP), Test-Driven Development, Version
+            Control with Git, Paired Programming. I hope to be chosen and contribute all my knowledge once placed with a client. You can find my github at LozanoRogelio to see any commits and changes done in this project.Wanted to make it simple and not add too much styling, Thank you!</p>
+      </div>
+      <footer>All Rights Reserved to Rogelio Lozano</footer>
    </div>
 
    <script src="higherlower.js"></script>
